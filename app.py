@@ -20,3 +20,6 @@ if mode=="Generate Questions":
 elif mode=="Generate Code Questions":
   topic=st.selectbox("Topics",["AIML","C/C++", "PYTHON","JAVA","DSA","DEVOPS","SQL","MYSQL"])
   count=st.slider("Number of Questions", 1,10,5)
+else:
+  question=st.text_area("Enter Interview Question Here!!")
+  answere=st.text_area("Enter Your Answere", height=160)
