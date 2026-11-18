@@ -10,3 +10,5 @@ except (keyError, FileNotFoundError):
   st.error("API key is missing. addit in advanced settings")
   st.stop()
 role=st.selectbox("Job Title",["select","devops","AI Engineer","Data Analyst","Test engineer","other"])
+if role =="other":
+  st.text_input("Enter your Job Title", "XXXXXX")
