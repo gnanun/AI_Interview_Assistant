@@ -1,4 +1,5 @@
 import streamlit as st
+!pip install -q groq
 from groq import Groq
 
 st.set_page_config(page_title="Gnanesh N", page_icon="🥰",layout="centered")
