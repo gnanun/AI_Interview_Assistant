@@ -12,6 +12,6 @@ except (keyError, FileNotFoundError):
 role=st.selectbox("Job Title",["select","devops","AI Engineer","Data Analyst","Test engineer","other"])
 if role =="other":
   st.text_input("Enter your Job Title", "XXXXXX")
-model=st.selectbox("Model",["select","openai/gpt-oss-20b","openai/gpt-oss-120b","other"])
-if model =="other":
-  st.text_input("Enter your Job Title", "XXXXXX")
+model=st.selectbox("Model",["select","openai/gpt-oss-20b","openai/gpt-oss-120b"])
+level=st.selectbox("Level",["select","Diificulty","Intermediate","Beginner"])
+
