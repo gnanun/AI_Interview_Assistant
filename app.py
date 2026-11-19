@@ -42,7 +42,7 @@ if btn:
     try:
       response=clent.chat.completions.create(
         model=gen_model,
-        messeges= [{"Role":"System", "Content":"Act As a senior Interviewer, Both HR and Technical experts"},{"role":"User":"Content": bg + task}],
+        messeges= [{"Role":"System", "Content":"Act As a senior Interviewer, Both HR and Technical experts"},{"role":"User","Content": bg + task}],
         temperature=0.7,
         max_tokens=1000
       )
