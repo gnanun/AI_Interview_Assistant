@@ -38,7 +38,7 @@ if btn:
   elif mode =="Improve the Answeres":
     task="question:" + question +"My answere is:" + answere + "Improve this answere based on choice of words, key words include , etc...."
   bg="Job role: " +role+" Difficulty level " + level
-  with st.spinner(Generating your answeres....!"):
+  with st.spinner("Generating your answeres....!"):
     try:
       response=clent.chat.completions.create(
         model=gen_model,
