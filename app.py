@@ -25,7 +25,7 @@ else:
   answere=st.text_area("Enter Your Answere", height=160)
 btn=st.button("Generate AI Response", type="Primary")
 if btn:
-  if mode==["Evaluate Answeres","Improve the answeres"] and (not question.strip() or (not answere.strip())]:
+  if mode==["Evaluate Answeres","Improve the answeres"] and (not question.strip() or (not answere.strip())):
     st.warning("Please Enter a valid Question and Answere")
     st.stop()
   st.success("Welcome!")
