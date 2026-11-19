@@ -46,6 +46,7 @@ if btn:
         temperature=0.7,
         max_tokens=1000
       )
+    finally:
       print(response.choices[0].message.content)
         
   print(task)
