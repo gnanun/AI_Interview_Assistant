@@ -47,6 +47,9 @@ if btn:
         max_tokens=1000
       )
       print(response.choices[0].message.content)
+    except Exception as e:
+      st.error("API Connection was Unsuccesfull", e)
+      st.info("Please check your API key and rate limits")
     finally:
       print("HI")
         
