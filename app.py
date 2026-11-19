@@ -40,7 +40,7 @@ if btn:
   bg="Job role: " +role+" Difficulty level " + level
   with st.spinner("Generating your answeres....!"):
     try:
-      response=clent.chat.completions.create(
+      response=client.chat.completions.create(
         model=gen_model,
         messeges= [{"Role":"System", "Content":"Act As a senior Interviewer, Both HR and Technical experts"},{"role":"User","Content": bg + task}],
         temperature=0.7,
