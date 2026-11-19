@@ -46,14 +46,17 @@ if btn:
         temperature=0.7,
         max_tokens=1000
       )
-      print(response.choices[0].message.content)
+      output=response.choices[0].message.content
+      st.subheader("AI Response")
+      st.markdown(output)
+      st.download_button("Download Response", output, file_name="Interview Response.txt", mime="txt/plain")
+      
     except Exception as e:
       st.error("API Connection was Unsuccesfull", e)
       st.info("Please check your API key and rate limits")
     finally:
-      print("HI")
-        
-  print(task)
+      st.write("Success")
+  
   st.success("Welcome!")
   st.write("Good Morning...")
-  print(task)
+ 
