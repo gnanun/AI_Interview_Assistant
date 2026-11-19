@@ -30,13 +30,13 @@ if btn:
     st.stop()
   
   if mode =="Generate Questions":
-    taks="Generate " + str(count) + "Frequently asked Interview questions 3 theoritical and 2 technical. do not give answeres, give hints"
+    task="Generate " + str(count) + "Frequently asked Interview questions 3 theoritical and 2 technical. do not give answeres, give hints"
   elif mode =="Generate Code Questions":
-    taks="Generate " + str(count) + "Frequently asked coding questions on topic" + topic + "and give hint to solve them. be accurate"
+    task="Generate " + str(count) + "Frequently asked coding questions on topic" + topic + "and give hint to solve them. be accurate"
   elif mode =="Evaluate Answeres":
-    taks="question:" + question +"My answere is:" + answere + "Evaluate this answere based on concept,relevent, communication, lenght of answere"
+    task="question:" + question +"My answere is:" + answere + "Evaluate this answere based on concept,relevent, communication, lenght of answere"
   elif mode =="Improve the Answeres":
-    taks="question:" + question +"My answere is:" + answere + "Improve this answere based on choice of words, key words include , etc...."
+    task="question:" + question +"My answere is:" + answere + "Improve this answere based on choice of words, key words include , etc...."
   print(task)
   st.success("Welcome!")
   st.write("Good Morning...")
