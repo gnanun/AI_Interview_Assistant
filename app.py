@@ -86,4 +86,4 @@ if btn:
             st.error(f"API Connection was unsuccessful: {e}")
             st.info("Please check your API key and rate limits")
 
-st.caption("It is built by Gnanesh N")
+st.caption("\n\n\n\nGnanesh N, ©️2026, All rights are Reserved")
