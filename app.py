@@ -28,7 +28,7 @@ if btn:
   if mode in ["Evaluate Answeres","Improve the answeres"] and (not question.strip() or (not answere.strip())):
     st.warning("Please Enter a valid Question and Answere")
     st.stop()
-  topics="Topic is" + topic + "Difffivulty Level is " + level
+  
   if mode =="Generate Questions":
     taks="Generate " + str(count) + "Frequently asked Interview questions 3 theoritical and 2 technical. do not give answeres, give hints"
   elif mode =="Generate Code Questions":
