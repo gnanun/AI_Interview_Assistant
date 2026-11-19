@@ -28,4 +28,15 @@ if btn:
   if mode in ["Evaluate Answeres","Improve the answeres"] and (not question.strip() or (not answere.strip())):
     st.warning("Please Enter a valid Question and Answere")
     st.stop()
+  topics="Topic is" + topic + "Difffivulty Level is " + level
+  if mode =="Generate Questions":
+    taks="Generate " + str(count) + "Frequently asked Interview questions 3 theoritical and 2 technical. do not give answeres, give hints"
+  elif mode =="Generate Code Questions":
+    taks="Generate " + str(count) + "Frequently asked coding questions on topic" + topic + "and give hint to solve them. be accurate"
+  elif mode =="Evaluate Answeres":
+    taks="question:" + question +"My answere is:" + answere + "Evaluate this answere based on concept,relevent, communication, lenght of answere"
+  elif mode =="Improve the Answeres":
+    taks="question:" + question +"My answere is:" + answere + "Improve this answere based on choice of words, key words include , etc...."
   st.success("Welcome!")
+  st.write("Good Morning...")
+  print(task)
