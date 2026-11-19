@@ -45,8 +45,8 @@ if btn:
         messeges= [{"Role":"System", "Content":"Act As a senior Interviewer, Both HR and Technical experts"},{"role":"User","Content": bg + task}],
         temperature=0.7,
         max_tokens=1000
-        print(response.choices[0].message.content)
       )
+      print(response.choices[0].message.content)
     finally:
       print("HI")
         
