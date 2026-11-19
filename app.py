@@ -37,5 +37,6 @@ if btn:
     taks="question:" + question +"My answere is:" + answere + "Evaluate this answere based on concept,relevent, communication, lenght of answere"
   elif mode =="Improve the Answeres":
     taks="question:" + question +"My answere is:" + answere + "Improve this answere based on choice of words, key words include , etc...."
+  print(task)
   st.success("Welcome!")
   st.write("Good Morning...")
