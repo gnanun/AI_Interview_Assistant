@@ -70,7 +70,7 @@ if btn:
                     {"role": "user", "content": bg + task}
                 ],
                 temperature=0.7,
-                max_tokens=100
+                max_tokens=1000
             )
 
             output = response.choices[0].message.content
