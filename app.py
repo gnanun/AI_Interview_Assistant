@@ -12,7 +12,7 @@ except (keyError, FileNotFoundError):
 role=st.selectbox("Job Title",["select","devops","AI Engineer","Data Analyst","Test engineer","other"])
 if role =="other":
   st.text_input("Enter your Job Title", "XXXXXX")
-model=st.selectbox("Model",["select","openai/gpt-oss-20b","openai/gpt-oss-120b"])
+gen_model=st.selectbox("Model",["select","openai/gpt-oss-20b","openai/gpt-oss-120b"])
 level=st.selectbox("Difficulty Level",["select","Advanced","Intermediate","Beginner"])
 mode=st.radio("Activity",["Generate Questions","Generate Code Questions","Evaluate Answeres", "Improve the Answeres"])
 if mode=="Generate Questions":
@@ -37,6 +37,18 @@ if btn:
     task="question:" + question +"My answere is:" + answere + "Evaluate this answere based on concept,relevent, communication, lenght of answere"
   elif mode =="Improve the Answeres":
     task="question:" + question +"My answere is:" + answere + "Improve this answere based on choice of words, key words include , etc...."
+  bg="Job role: " +role+" Difficulty level " + level
+  with st.spinner(Generating your answeres....!"):
+    try:
+      response=clent.chat.completions.create(
+        model=gen_model,
+        messeges= [{"Role":"System", "Content":"Act As a senior Interviewer, Both HR and Technical experts"},{"role":"User":"Content": bg + task}],
+        temperature=0.7,
+        max_tokens=1000
+      )
+      print(response.choices[0].message.content)
+        
   print(task)
   st.success("Welcome!")
   st.write("Good Morning...")
+  print(task)
