@@ -39,4 +39,3 @@ if btn:
     taks="question:" + question +"My answere is:" + answere + "Improve this answere based on choice of words, key words include , etc...."
   st.success("Welcome!")
   st.write("Good Morning...")
-  print(task)
