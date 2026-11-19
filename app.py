@@ -37,6 +37,7 @@ else:
 btn = st.button("Generate AI Response")
 
 if btn:
+    st.write("Welcome!")
 
     if mode in ["Evaluate Answers", "Improve the Answers"] and (not question.strip() or not answer.strip()):
         st.warning("Please Enter a valid Question and Answer")
@@ -85,5 +86,3 @@ if btn:
             st.error(f"API Connection was unsuccessful: {e}")
             st.info("Please check your API key and rate limits")
 
-    st.write("Welcome!")
-    st.write("Good Morning...")
